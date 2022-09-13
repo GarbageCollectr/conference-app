@@ -27,20 +27,69 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+function dashboard(){
+    content.innerHTML = 
+    `
+    <h1 class="mt-4">Contoso Conference</h1>
+    <p>
+        Welcome to Contoso Conference ....
+    </p>
+    <p>
+       
+    </p>
+    `
+}
+
 function events(){
-    content.innerHTML = `<p> test </p>`
+    content.innerHTML = 
+    `
+    <h1 class="mt-4">Contoso Events</h1>
+    <p>
+        Here are the current planned events ....
+    </p>
+    <p>
+       
+    </p>
+    `
 }
 
 function tracks(){
-    content.innerHTML = `<p> test </p>`
+    content.innerHTML = 
+    `
+    <h1 class="mt-4">Contoso Tracks</h1>
+    <p>
+        Here are the available tracks of the conferences ....
+    </p>
+    <p>
+       
+    </p>
+    `
 }
 
 function speakers(){
-    content.innerHTML = `<p> test </p>`
+    content.innerHTML = 
+    `
+    <h1 class="mt-4">Contoso Speakers</h1>
+    <p>
+        Here are the speakers ....
+    </p>
+    <p>
+       
+    </p>
+    `
 }
 
 function status(){
-    content.innerHTML = `<p> test </p>`
+    content.innerHTML = 
+    `
+    <h1 class="mt-4">Status</h1>
+    <p>
+        Registered events will be here ....
+    </p>
+    <p>
+       
+    </p>
+    `
 }
 
 // var reader = new FileReader();
