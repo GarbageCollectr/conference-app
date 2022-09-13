@@ -87,7 +87,7 @@ function status(){
         Registered events will be here ....
     </p>
     <p>
-       
+       Hello
     </p>
     `
 }
