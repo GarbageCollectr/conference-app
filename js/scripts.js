@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+const content = document.querySelector('#change')
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Toggle the side navigation
@@ -25,4 +27,50 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+function events(){
+    content.innerHTML = `<p> test </p>`
+}
 
+function tracks(){
+    content.innerHTML = `<p> test </p>`
+}
+
+function speakers(){
+    content.innerHTML = `<p> test </p>`
+}
+
+function status(){
+    content.innerHTML = `<p> test </p>`
+}
+
+// var reader = new FileReader();
+
+// reader.onload = function(e){
+//     var text = reader.result
+// }
+
+// reader.readAsDataURL('C:\Users\AlexW\VSCodeProj\conference-app\conferences.json')
+
+
+
+// const pickerOpts = {
+//     types: [
+//       {
+//         description: 'JSON',
+//         accept: {
+//           'conference-app/*': ['.json']
+//         }
+//       },
+//     ],
+//     excludeAcceptAllOption: true,
+//     multiple: false
+//   };
+
+// // var confData = '.\\conferences.json'
+// async function deserialize() {
+//     fileHandle = await window.showOpenFilePicker(pickerOpts);
+// const fileData = await fileHandle.getFile();
+// let CD = JSON.parse(fileData);
+// console.log(JSON.stringify(CD));
+// }
+// fileHandle.getFile()
