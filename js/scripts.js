@@ -61,7 +61,7 @@ function speakersdata() {
        console.log(raps)
        var table = "<article>";
        for (var i=0; i<raps.length; i++) {
-           table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:"'+raps[i].Email+'">Send Email</a>'+"</p>";
+           table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
        }
        
        //clearInterval(loadData);
@@ -77,7 +77,7 @@ function speakersdata() {
        console.log(raps2)
        var table = "<article>";
        for (var i=0; i<raps2.length; i++) {
-           table += "<h2>"+raps2[i].Title+"</h2>"+"<p>" +raps2[i].Location+ "</p>";
+           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker;
        }
        
        //clearInterval(loadData);
