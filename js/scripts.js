@@ -21,12 +21,20 @@
 //test
 let raps;
 const content = document.querySelector('#one')
-var url = '..\\conferences.json';
-var req = new Request(url);
+var urlspeak = '..\\conferences.json';
+var urlevents = '..\\events.json';
+var req = new Request(urlspeak);
+var req2 = new Request(urlevents);
 fetch(req)
  .then(response => response.json())
  .then((data) => {
    raps = data;
+ });
+
+ fetch(req2)
+ .then(response => response.json())
+ .then((data) => {
+   raps2 = data;
  });
 
 
@@ -37,17 +45,49 @@ function data() {
       console.log(raps)
       var table = "<article>";
       for (var i=0; i<raps.length; i++) {
-          table += "<p>"+raps[i].Speaker+"</p>"+"<p>" +raps[i].Title+ "</p>";
+          table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title+ "</p>";
       }
       content.innerHTML = table
-      clearInterval(loadData);
+      //clearInterval(loadData);
       generateData(raps);
       
    }
 }
 
+function speakersdata() {
+    if(raps == undefined) {
+       console.log("Data is being parsed")
+    } else {
+       console.log(raps)
+       var table = "<article>";
+       for (var i=0; i<raps.length; i++) {
+           table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:"'+raps[i].Email+'">Send Email</a>'+"</p>";
+       }
+       
+       //clearInterval(loadData);
+       generateData(raps);
+       return table
+    }
+ }
 
-const loadData = setInterval(data, 1000);
+ function eventsdata() {
+    if(raps2 == undefined) {
+       console.log("Data is being parsed")
+    } else {
+       console.log(raps2)
+       var table = "<article>";
+       for (var i=0; i<raps2.length; i++) {
+           table += "<h2>"+raps2[i].Title+"</h2>"+"<p>" +raps2[i].Location+ "</p>";
+       }
+       
+       //clearInterval(loadData);
+       generateData(raps2);
+       return table
+       
+    }
+ }
+
+
 
 function generateData(raps) {
   let newData = raps.articles;
@@ -86,16 +126,15 @@ function dashboard(){
 }
 
 function events(){
-    content.innerHTML = 
-    `
-    <h1 class="mt-4">Contoso Events</h1>
-    <p>
-        Here are the current planned events ....
-    </p>
-    <p>
+    content.innerHTML=
+    '<h1 class="mt-4">Contoso Events</h1>'
+    +"<p>"
+        +eventsdata()
+    +"</p>"
+    +"<p>"
        
-    </p>
-    `
+    +"</p>"
+    
 }
 
 function tracks(){
@@ -112,16 +151,14 @@ function tracks(){
 }
 
 function speakers(){
-    content.innerHTML = 
-    `
-    <h1 class="mt-4">Contoso Speakers</h1>
-    <p>
-        Here are the speakers ....
-    </p>
-    <p>
+    content.innerHTML=
+    '<h1 class="mt-4">Contoso Events</h1>'
+    +'<p>'
+        +speakersdata()
+    +"</p>"
+    +"<p>"
        
-    </p>
-    `
+    +"</p>"
 }
 
 function status(){
