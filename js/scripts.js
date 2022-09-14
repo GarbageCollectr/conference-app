@@ -103,37 +103,7 @@ function status(){
     `
 }
 
-// var reader = new FileReader();
 
-// reader.onload = function(e){
-//     var text = reader.result
-// }
-
-// reader.readAsDataURL('C:\Users\AlexW\VSCodeProj\conference-app\conferences.json')
-
-
-
-// const pickerOpts = {
-//     types: [
-//       {
-//         description: 'JSON',
-//         accept: {
-//           'conference-app/*': ['.json']
-//         }
-//       },
-//     ],
-//     excludeAcceptAllOption: true,
-//     multiple: false
-//   };
-
-// // var confData = '.\\conferences.json'
-// async function deserialize() {
-//     fileHandle = await window.showOpenFilePicker(pickerOpts);
-// const fileData = await fileHandle.getFile();
-// let CD = JSON.parse(fileData);
-// console.log(JSON.stringify(CD));
-// }
-// fileHandle.getFile()
 const contents = document.querySelector('#one')
 
 
@@ -156,9 +126,11 @@ function init() {
         for (var i=0; i<response.length; i++) {
             table += "<tr>"+response[i]+"</tr>";
         }
-        contents.innerHTML = table
+        return table
     });
  
    }
+
+   let myJSON = init()
 
 
