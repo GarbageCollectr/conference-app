@@ -11,10 +11,12 @@
 async function printJSON() {
     const response = await fetch("..\\conferences.json");
     const json = await response.json();
-    return json;
+    return json
 }
 
 let data = printJSON()
+
+
 
 const content = document.querySelector('#change')
 
