@@ -131,4 +131,13 @@ function init() {
  
    }
 
+if (window.localStorage){
+    //...
+}
 
+//localStorage.setItem("myKey","some text value");
+//var textData = localStorage.getItem("myKey");
+//localStorage["myKey"] = "some text value";
+//var textData = localStorage["myKey"];
+//localStorage.myKey = "some text value";
+//var textData = localStorage.myKey;
