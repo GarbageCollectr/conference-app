@@ -142,7 +142,9 @@ function tracks(){
     `
     <h1 class="mt-4">Contoso Tracks</h1>
     <p>
-        Here are the available tracks of the conferences ....
+    <h2><span>Sunday, December 4</span></h2>
+    8:00A - 6:00P -- Registration Open<br />1:30P- 3:30P --  The IT Services Professional Summit <br />2:00P - 6:00P -- Exhibit Set Up<br />5:00P - 6:00P -- <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7f287f2"></a> Sessions<br />6:30P - 7:00P -- New Members Networking Meet-Up<br />7:00P - 9:00P -- President's Reception (<span>Hors d'oeuvres &amp; drink ticket provided)</span>
+    <p><a href="#diversity"></a></p>
     </p>
     <p>
        
