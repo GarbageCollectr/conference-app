@@ -20,7 +20,7 @@
 
 //test
 let raps;
-
+const content = document.querySelector('#one')
 var url = '..\\conferences.json';
 var req = new Request(url);
 fetch(req)
@@ -30,15 +30,22 @@ fetch(req)
  });
 
 
-function data () {
+function data() {
    if(raps == undefined) {
       console.log("Data is being parsed")
    } else {
-      console.log(raps);
+      console.log(raps)
+      var table = "<article>";
+      for (var i=0; i<raps.length; i++) {
+          table += "<p>"+raps[i].Speaker+"</p>"+"<p>" +raps[i].Title+ "</p>";
+      }
+      content.innerHTML = table
       clearInterval(loadData);
       generateData(raps);
+      
    }
 }
+
 
 const loadData = setInterval(data, 1000);
 
@@ -46,11 +53,6 @@ function generateData(raps) {
   let newData = raps.articles;
   console.log(newData);
 }
-
-
-
-
-const content = document.querySelector('#one')
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -136,30 +138,33 @@ function status(){
 }
 
 
-const contents = document.querySelector('#one')
 
 
-function readTextFile(callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("json");
-    rawFile.open('GET', '../conferences.json', true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    };
-    rawFile.send(null);
-}
+//Old method for reading JSON file, saved just in case
 
-function init() {
-    readTextFile(function(response) {
-        var table = "<table>";
-        console.log(JSON.parse(response)[0])
-        for (var i=0; i<response.length; i++) {
-            table += "<tr>"+response[i]+"</tr>";
-        }
-        contents.innerHTML = table
-        return table
-    });
- 
-   }
+// const contents = document.querySelector('#one')
+
+
+// function readTextFile(callback) {
+//     var rawFile = new XMLHttpRequest();
+//     rawFile.overrideMimeType("json");
+//     rawFile.open('GET', '../conferences.json', true);
+//     rawFile.onreadystatechange = function() {
+//         if (rawFile.readyState === 4 && rawFile.status == "200") {
+//             callback(rawFile.responseText);
+//         }
+//     };
+//     rawFile.send(null);
+// }
+
+// function init() {
+//     readTextFile(function(response) {
+//         var table = "<table>";
+//         console.log(JSON.parse(response))
+//         for (var i=0; i<response.length; i++) {
+//             table += "<tr>"+response[i]+"</tr>";
+//         }
+//         contents.innerHTML = table
+//         return table
+//     });
+// }
