@@ -18,7 +18,7 @@ let data = printJSON()
 
 
 
-const content = document.querySelector('#change')
+const content = document.querySelector('#one')
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -130,7 +130,5 @@ function init() {
     });
  
    }
-
-   let myJSON = init()
 
 
