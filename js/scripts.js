@@ -137,8 +137,19 @@ function status(){
     `
 }
 
+if (window.localStorage) {
+    //...
+}
+localStorage.setItem("myKey","some text value");
+var textData = localStorage.getItem("myKey");
+localStorage["myKey"] = "some text value";
+var textData = localStorage["myKey"];
+localStorage.myKey = "some text value";
+var textData = localStorage.myKey;
 
-
+// for (var i=0; i<raps.length; i++) {
+//     raps[i].ID;
+// }
 
 //Old method for reading JSON file, saved just in case
 
@@ -165,6 +176,5 @@ function status(){
 //             table += "<tr>"+response[i]+"</tr>";
 //         }
 //         contents.innerHTML = table
-//         return table
 //     });
 // }
