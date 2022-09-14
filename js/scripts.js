@@ -24,3 +24,32 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+const contents = document.querySelector('#one')
+
+
+function readTextFile(callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("json");
+    rawFile.open('GET', '../conferences.json', true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    };
+    rawFile.send(null);
+}
+
+function init() {
+    readTextFile(function(response) {
+        var table = "<table>";
+        console.log(JSON.parse(response)[0])
+        for (var i=0; i<response.length; i++) {
+            table += "<tr>"+response[i]+"</tr>";
+        }
+        contents.innerHTML = table
+    });
+ 
+   }
+
+
