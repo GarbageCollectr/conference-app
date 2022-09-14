@@ -4,56 +4,64 @@
 		"Location": "Denver, CO",
 		"Speaker": "Boswell Darnce",
 		"Title": "Omni Automation and You",
-		"Email": "boswell.darnce@wbytz.com"
+		"Email": "boswell.darnce@wbytz.com",
+		"Track": "1"
 	},
 	{
 		"ID": "101",
 		"Location": "Denver, CO",
 		"Speaker": "Shelia Darnell",
 		"Title": "OmniGraffle Scripting Basics",
-		"Email": "shelia.darnell@wbytz.com"
+		"Email": "shelia.darnell@wbytz.com",
+		"Track": "1"
 	},
 	{
 		"ID": "102",
 		"Location": "Denver, CO",
 		"Speaker": "Shelia Darnell",
 		"Title": "OmniGraffle Advanced Scripting",
-		"Email": "shelia.darnell@wbytz.com"
+		"Email": "shelia.darnell@wbytz.com",
+		"Track": "1"
 	},
 	{
 		"ID": "103",
 		"Location": "Denver, CO",
 		"Speaker": "Warnell Snead",
 		"Title": "Automating Project Management",
-		"Email": "warnell.snead@wbytz.com"
+		"Email": "warnell.snead@wbytz.com",
+		"Track": "1"
 	},
 	{
 		"ID": "104",
 		"Location": "Denver, CO",
 		"Speaker": "Tyne Reid",
 		"Title": "Simplifying Personal Management via Automation",
-		"Email": "tyne.reid@wbytz.com"
+		"Email": "tyne.reid@wbytz.com",
+		"Track": "2"
 	},
 	{
 		"ID": "105",
 		"Location": "Denver, CO",
 		"Speaker": "Greg Sisus",
 		"Title": "All Scripting Begins with Outlines",
-		"Email": "greg.sisus@wbytz.com"
+		"Email": "greg.sisus@wbytz.com",
+		"Track": "2"
 	},
 	{
 		"ID": "200",
 		"Location": "Seattle, WA",
 		"Speaker": "Mary-Jeanne Wallaby",
 		"Title": "Scripting Between Apps",
-		"Email": "mary-jeanne.wallaby@wbytz.com"
+		"Email": "mary-jeanne.wallaby@wbytz.com",
+		"Track": "2"
 	},
 	{
 		"ID": "201",
 		"Location": "Seattle, WA",
 		"Speaker": "Warnell Snead",
 		"Title": "The Universal “Task|Action” Concept",
-		"Email": "warnell.snead@wbytz.com"
+		"Email": "warnell.snead@wbytz.com",
+		"Track": "2"
 	},
 	{
 		"ID": "202",

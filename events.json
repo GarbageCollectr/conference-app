@@ -1,0 +1,23 @@
+[
+	{
+		"ID": "400",
+		"Location": "Denver, CO",
+		"Speaker": "Boswell Darnce",
+		"Title": "Contoso Conf Denver",
+		"Email": "registration@contosoconf.com"
+	},
+	{
+		"ID": "401",
+		"Location": "Seattle, WA",
+		"Speaker": "Shelia Darnell",
+		"Title": "Contoso Conf Seattle",
+		"Email": "registration@contosoconf.com"
+	},
+    {
+        "ID": "402",
+        "Location": "Dallas, TX",
+        "Speaker": "Molly Sturbil",
+        "Title": "Contoso Conf Dallas",
+        "Email": "registration@contosoconf.com"
+    }
+]
