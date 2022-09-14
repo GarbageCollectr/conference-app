@@ -8,13 +8,45 @@
 // 
 
 // actually works and loads json when using VSC Live Server
-async function printJSON() {
-    const response = await fetch("..\\conferences.json");
-    const json = await response.json();
-    return json
+// let articles = null;
+// async function printJSON() {
+//     const response = await fetch("..\\conferences.json");
+//     const json = await response.json();
+//     articles = json.articles
+//     return articles
+// }
+
+// let data = printJSON()
+
+//test
+let raps;
+
+var url = '..\\conferences.json';
+var req = new Request(url);
+fetch(req)
+ .then(response => response.json())
+ .then((data) => {
+   raps = data;
+ });
+
+
+function data () {
+   if(raps == undefined) {
+      console.log("Data is being parsed")
+   } else {
+      console.log(raps);
+      clearInterval(loadData);
+      generateData(raps);
+   }
 }
 
-let data = printJSON()
+const loadData = setInterval(data, 1000);
+
+function generateData(raps) {
+  let newData = raps.articles;
+  console.log(newData);
+}
+
 
 
 
@@ -126,6 +158,7 @@ function init() {
         for (var i=0; i<response.length; i++) {
             table += "<tr>"+response[i]+"</tr>";
         }
+        contents.innerHTML = table
         return table
     });
  
