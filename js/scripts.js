@@ -7,6 +7,15 @@
 // Scripts
 // 
 
+// actually works and loads json when using VSC Live Server
+async function printJSON() {
+    const response = await fetch("..\\conferences.json");
+    const json = await response.json();
+    return json;
+}
+
+let data = printJSON()
+
 const content = document.querySelector('#change')
 
 window.addEventListener('DOMContentLoaded', event => {
