@@ -38,9 +38,7 @@ fetch(req)
  .then((data) => {
    raps2 = data;
  });
-
  
-
 function data() {
    if(raps == undefined) {
       console.log("Data is being parsed")
@@ -204,35 +202,40 @@ function register(){
     EvInd = document.getElementById("conf").value;
     console.log(EvInd);
     return EvInd;
+    
 }
 
 
-if (window.localStorage) {
-    //...
+// if (window.localStorage) {
+//     //...
+// }
+// localStorage.setItem("myKey","some text value");
+// var textData = localStorage.getItem("myKey");
+function RegLocal(){
+    localStorage["regConf"] = raps2[0].Location + "|" + raps2[0].Speaker + "|" + raps2[0].Title + "|" + raps2[0].Email;
+    var textData2 = localStorage["regConf"];
+    console.log(textData2);
 }
-localStorage.setItem("myKey","some text value");
-var textData = localStorage.getItem("myKey");
-localStorage["myKey"] = "some text value";
-var textData = localStorage["myKey"];
+
+// localStorage["myKey"] = "some text value";
+// var textData = localStorage["myKey"];
 // localStorage.myKey = "some text value";
 // var textData = localStorage.myKey;
 EvInd = 0;
 function ConfID400() {
-    console.log(raps2)
-    localStorage[EvInd] = raps2[0]
+    localStorage["regConf"] = raps2[0].Location + "|" + raps2[0].Speaker + "|" + raps2[0].Title;
+    var DenverData = localStorage["regConf"];
     
 }
 
 function ConfID401() {
-    console.log(raps2)
-    localStorage.setItem("regConf", raps2[1]);
-    //var textData = localStorage.getItem("regConf");
+    localStorage["regConf"] = raps2[1].Location + "|" + raps2[1].Speaker + "|" + raps2[1].Title;
+    var SeattleData = localStorage["regConf"];
 }
 
 function ConfID402() {
-    console.log(raps2)
-    localStorage.setItem("regConf", raps2[2]);
-    //var textData = localStorage.getItem("regConf");
+    localStorage["regConf"] = raps2[2].Location + "|" + raps2[2].Speaker + "|" + raps2[2].Title;
+    var DallasData = localStorage["regConf"];
 }
 
 // let confValue = document.getElementById("conf").value
