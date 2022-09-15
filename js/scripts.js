@@ -20,6 +20,7 @@
 
 //test
 let raps;
+let raps2;
 const content = document.querySelector('#one')
 var urlspeak = '..\\conferences.json';
 var urlevents = '..\\events.json';
