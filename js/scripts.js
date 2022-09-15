@@ -181,7 +181,7 @@ function register(){
     +'<label for="conf">Choose a Conference</label><br>'
     +'<select name="conf" id="conf" required>'
     +    '<option value="">Select Below</option>'
-    +    '<option value="">'
+    +    '<option value="0">'
         +raps2[0].Location
     +'</option>'
     +    '<option value="1">'
