@@ -12,13 +12,15 @@
 		"Location": "Seattle, WA",
 		"Speaker": "Shelia Darnell",
 		"Title": "Contoso Conf Seattle",
-		"Email": "registration@contosoconf.com"
+		"Email": "registration@contosoconf.com",
+		"Seats": 100
 	},
     {
         "ID": "402",
         "Location": "Dallas, TX",
         "Speaker": "Molly Sturbil",
         "Title": "Contoso Conf Dallas",
-        "Email": "registration@contosoconf.com"
+        "Email": "registration@contosoconf.com",
+		"Seats": 100
     }
 ]
