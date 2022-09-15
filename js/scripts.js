@@ -146,8 +146,9 @@ function tracks(){
     <h2><span>Track 1, MSSA CCAD7</span></h2>
     8:00A - 6:00P -- Registration Open<br />1:30P- 3:30P --  The IT Services Professional Summit <br />2:00P - 6:00P -- Exhibit Set Up<br />5:00P - 6:00P -- <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7f287f2"></a> Sessions<br />6:30P - 7:00P -- New Members Networking Meet-Up<br />7:00P - 9:00P -- President's Reception (<span>Hors d'oeuvres &amp; drink ticket provided)</span>
     <h2><span>Track 2, MSSA CCAD6</span></h2>
-
+    9:00A - 12:00P -- Conference App Completion<br />12:00P - 1:00PM -- Lunch<br />1:30P - 3:30P -- Whiteboarding Techniques
     <h2><span>Track 3, MSSA PCA</span></h2>
+    7:00A - 1:00P -- Registration Open<br /><span style="font-size: 15px;">8:15A - 9:15A -- Breakout Sessions<br /></span><span style="font-size: 15px;">9:30A - 10:45A -- Closing Speaker (Includes Breakfast Buffet) <br /></span>10:45A - 11:00A -- Closing Remarks<br />12:00P - 2:00P -- Q & A Session
     </p>
     <p>
        
