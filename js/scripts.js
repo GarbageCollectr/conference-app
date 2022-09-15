@@ -57,6 +57,8 @@ function data() {
    }
 }
 
+
+
 function speakersdata() {
     if(raps == undefined) {
        console.log("Data is being parsed")
@@ -254,6 +256,11 @@ function ConfSelector()
             break;
     }
 }
+
+function myData(raps2){
+    console.log(raps2[0])
+}
+
 // function data() {
 //     if(raps == undefined) {
 //        console.log("Data is being parsed")
