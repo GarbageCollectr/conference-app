@@ -122,7 +122,7 @@ function dashboard(){
         Welcome to Contoso Conference ....
     </p>
     <p>
-       
+       Here at Contoso Conference we are better than you, and we know it!
     </p>
     `
 }
@@ -152,9 +152,6 @@ function tracks(){
     <h2><span>Track 3, MSSA PCA</span></h2>
     7:00A - 1:00P -- Registration Open<br /><span style="font-size: 15px;">8:15A - 9:15A -- Breakout Sessions<br /></span><span style="font-size: 15px;">9:30A - 10:45A -- Closing Speaker (Includes Breakfast Buffet) <br /></span>10:45A - 11:00A -- Closing Remarks<br />12:00P - 2:00P -- Q & A Session
     </p>
-    <p>
-       
-    </p>
     `
 }
 
@@ -164,9 +161,6 @@ function speakers(){
     +'<p>'
         +speakersdata()
     +"</p>"
-    +"<p>"
-       
-    +"</p>"
 }
 
 function status(){
@@ -175,9 +169,6 @@ function status(){
     <h1 class="mt-4">Status</h1>
     <p>
         Registered events will be here ....
-    </p>
-    <p>
-       Hello
     </p>
     `
 }
@@ -207,10 +198,12 @@ function register(){
     +'<label for="track1">Track 1</label><br>'
     +'<input type="radio" id="track2" name="track" value="Track 2">'
     +'<label for="track2">Track 2</label><br>'
-    +'<button class="btn btn-primary" onclick="submit()">Submit</button>'
+    +'<button class="btn btn-primary" onclick="ConfSelector()">Submit</button>'
     +'</form>'
 
 }
+
+
 
 if (window.localStorage) {
     //...
