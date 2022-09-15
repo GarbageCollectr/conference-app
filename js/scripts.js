@@ -19,6 +19,7 @@
 // let data = printJSON()
 
 //test
+var EvInd;
 let raps;
 let raps2;
 const content = document.querySelector('#one')
@@ -185,10 +186,10 @@ function register(){
     +    '<option value="">'
         +raps2[0].Location
     +'</option>'
-    +    '<option value="">'
+    +    '<option value="1">'
         +raps2[1].Location
     +'</option>'
-    +   ' <option value="">'
+    +   ' <option value="2">'
         +raps2[2].Location
     +'</option>'
     +'</select><br>'
@@ -199,9 +200,10 @@ function register(){
     +'<label for="track2">Track 2</label><br>'
     +'<button class="btn btn-primary" onclick="ConfSelector()">Submit</button>'
     +'</form>'
-
+    EvInd = document.getElementById("conf").value;
+    console.log(EvInd);
+    return EvInd;
 }
-
 
 
 if (window.localStorage) {
@@ -211,24 +213,47 @@ localStorage.setItem("myKey","some text value");
 var textData = localStorage.getItem("myKey");
 localStorage["myKey"] = "some text value";
 var textData = localStorage["myKey"];
-localStorage.myKey = "some text value";
-var textData = localStorage.myKey;
-
+// localStorage.myKey = "some text value";
+// var textData = localStorage.myKey;
+EvInd = 0;
 function ConfID400() {
     console.log(raps2)
-    localStorage.setItem("regConf", raps2[0])
+    localStorage[EvInd] = raps2[0]
+    
 }
 
 function ConfID401() {
     console.log(raps2)
-    localStorage.setItem("regConf", raps2[1])
+    localStorage.setItem("regConf", raps2[1]);
+    //var textData = localStorage.getItem("regConf");
 }
 
 function ConfID402() {
     console.log(raps2)
-    localStorage.setItem("regConf", raps2[2])
+    localStorage.setItem("regConf", raps2[2]);
+    //var textData = localStorage.getItem("regConf");
 }
 
+// let confValue = document.getElementById("conf").value
+function ConfSelector() 
+{
+    switch (EvInd)
+    {
+        case 0:
+            ConfID400();
+            console.log("made it to 253");
+            break;
+        case 1:
+            ConfID401();
+            break;
+        case 2:
+            ConfID402();
+            break;
+        default:
+            console.log("reached, not assigned");
+            break;
+    }
+}
 // function data() {
 //     if(raps == undefined) {
 //        console.log("Data is being parsed")
