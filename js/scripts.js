@@ -19,6 +19,7 @@
 // let data = printJSON()
 
 //test
+var EvInd;
 let raps;
 let raps2;
 const content = document.querySelector('#one')
@@ -37,8 +38,7 @@ fetch(req)
  .then((data) => {
    raps2 = data;
  });
-
-
+ 
 function data() {
    if(raps == undefined) {
       console.log("Data is being parsed")
@@ -62,7 +62,7 @@ function speakersdata() {
        console.log(raps)
        var table = "<article>";
        for (var i=0; i<raps.length; i++) {
-           table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
+           table +='<img src="'+raps[i].photo+'">'+"<br>"+ "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
        }
 
        //clearInterval(loadData);
@@ -78,7 +78,7 @@ function speakersdata() {
        console.log(raps2)
        var table = "<article>";
        for (var i=0; i<raps2.length; i++) {
-           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker;
+           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker +"<br>"+"Available Seats: "+ raps2[i].Seats +"<br>"+ '<button class="btn btn-primary" onclick="register()">Register</button>';
        }
        
        //clearInterval(loadData);
@@ -121,7 +121,7 @@ function dashboard(){
         Welcome to Contoso Conference ....
     </p>
     <p>
-       
+       Here at Contoso Conference we are better than you, and we know it!
     </p>
     `
 }
@@ -132,23 +132,22 @@ function events(){
     +"<p>"
         +eventsdata()
     +"</p>"
-    +"<p>"
-       
-    +"</p>"
+
     
 }
 
 function tracks(){
     content.innerHTML = 
     `
-    <h1 class="mt-4">Contoso Tracks</h1>
+    <h1 class="mt-4">Contoso Tracks At A Glance</h1>
+    <h3><em style="font-size: 15px; font-weight: normal;"><em>Times and events are preliminary and subject to change. </em>Times listed below are EST.</em></h3>
     <p>
-    <h2><span>Sunday, December 4</span></h2>
+    <h2><span>Track 1, MSSA CCAD7</span></h2>
     8:00A - 6:00P -- Registration Open<br />1:30P- 3:30P --  The IT Services Professional Summit <br />2:00P - 6:00P -- Exhibit Set Up<br />5:00P - 6:00P -- <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7f287f2"></a> Sessions<br />6:30P - 7:00P -- New Members Networking Meet-Up<br />7:00P - 9:00P -- President's Reception (<span>Hors d'oeuvres &amp; drink ticket provided)</span>
-    <p><a href="#diversity"></a></p>
-    </p>
-    <p>
-       
+    <h2><span>Track 2, MSSA CCAD6</span></h2>
+    9:00A - 12:00P -- Conference App Completion<br />12:00P - 1:00PM -- Lunch<br />1:30P - 3:30P -- Whiteboarding Techniques
+    <h2><span>Track 3, MSSA PCA</span></h2>
+    7:00A - 1:00P -- Registration Open<br /><span style="font-size: 15px;">8:15A - 9:15A -- Breakout Sessions<br /></span><span style="font-size: 15px;">9:30A - 10:45A -- Closing Speaker (Includes Breakfast Buffet) <br /></span>10:45A - 11:00A -- Closing Remarks<br />12:00P - 2:00P -- Q & A Session
     </p>
     `
 }
@@ -159,9 +158,6 @@ function speakers(){
     +'<p>'
         +speakersdata()
     +"</p>"
-    +"<p>"
-       
-    +"</p>"
 }
 
 function status(){
@@ -169,23 +165,113 @@ function status(){
     `
     <h1 class="mt-4">Status</h1>
     <p>
-        Registered events will be here ....
-    </p>
-    <p>
-       Hello
+        
     </p>
     `
 }
 
-if (window.localStorage) {
-    //...
+function register(){
+    content.innerHTML = 
+    +'<h1 class="mt-4">Register for Conference</h1>'
+    +'<form>'
+    +'<label for="fname">First Name:</label>'
+    +'<input type="text" id="fname" name="fname" required><br><br>'
+    +'<label for="lname">Last Name:</label>'
+    +'<input type="text" id="lname" name="lname" required><br><br>'
+    +'<label for="conf">Choose a Conference</label><br>'
+    +'<select name="conf" id="conf" required>'
+    +    '<option value="">Select Below</option>'
+    +    '<option value="">'
+        +raps2[0].Location
+    +'</option>'
+    +    '<option value="1">'
+        +raps2[1].Location
+    +'</option>'
+    +   ' <option value="2">'
+        +raps2[2].Location
+    +'</option>'
+    +'</select><br>'
+    +'<label for="track">Chose a track:</label><br>'
+    +'<input type="radio" id="track1" name="track" value="Track 1">'
+    +'<label for="track1">Track 1</label><br>'
+    +'<input type="radio" id="track2" name="track" value="Track 2">'
+    +'<label for="track2">Track 2</label><br>'
+    +'<button class="btn btn-primary" onclick="ConfSelector()">Submit</button>'
+    +'</form>'
+    EvInd = document.getElementById("conf").value;
+    console.log(EvInd);
+    return EvInd;
+    
 }
-localStorage.setItem("myKey","some text value");
-var textData = localStorage.getItem("myKey");
-localStorage["myKey"] = "some text value";
-var textData = localStorage["myKey"];
-localStorage.myKey = "some text value";
-var textData = localStorage.myKey;
+
+
+// if (window.localStorage) {
+//     //...
+// }
+// localStorage.setItem("myKey","some text value");
+// var textData = localStorage.getItem("myKey");
+function RegLocal(){
+    localStorage["regConf"] = raps2[0].Location + "|" + raps2[0].Speaker + "|" + raps2[0].Title + "|" + raps2[0].Email;
+    var textData2 = localStorage["regConf"];
+    console.log(textData2);
+}
+
+// localStorage["myKey"] = "some text value";
+// var textData = localStorage["myKey"];
+// localStorage.myKey = "some text value";
+// var textData = localStorage.myKey;
+EvInd = 0;
+function ConfID400() {
+    localStorage["regConf"] = raps2[0].Location + "|" + raps2[0].Speaker + "|" + raps2[0].Title;
+    var DenverData = localStorage["regConf"];
+    
+}
+
+function ConfID401() {
+    localStorage["regConf"] = raps2[1].Location + "|" + raps2[1].Speaker + "|" + raps2[1].Title;
+    var SeattleData = localStorage["regConf"];
+}
+
+function ConfID402() {
+    localStorage["regConf"] = raps2[2].Location + "|" + raps2[2].Speaker + "|" + raps2[2].Title;
+    var DallasData = localStorage["regConf"];
+}
+
+// let confValue = document.getElementById("conf").value
+function ConfSelector() 
+{
+    switch (EvInd)
+    {
+        case 0:
+            ConfID400();
+            console.log("made it to 253");
+            break;
+        case 1:
+            ConfID401();
+            break;
+        case 2:
+            ConfID402();
+            break;
+        default:
+            console.log("reached, not assigned");
+            break;
+    }
+}
+// function data() {
+//     if(raps == undefined) {
+//        console.log("Data is being parsed")
+//     } else {
+//        console.log(raps)
+//        var table = "<article>";
+//        for (var i=0; i<raps.length; i++) {
+//            table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title+ "</p>";
+//        }
+//        content.innerHTML = table
+//        //clearInterval(loadData);
+//        generateData(raps);
+       
+//     }
+//  }
 
 // for (var i=0; i<raps.length; i++) {
 //     raps[i].ID;
