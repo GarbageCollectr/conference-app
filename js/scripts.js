@@ -140,11 +140,14 @@ function events(){
 function tracks(){
     content.innerHTML = 
     `
-    <h1 class="mt-4">Contoso Tracks</h1>
+    <h1 class="mt-4">Contoso Tracks At A Glance</h1>
+    <h3><em style="font-size: 15px; font-weight: normal;"><em>Times and events are preliminary and subject to change. </em>Times listed below are EST.</em></h3>
     <p>
-    <h2><span>Sunday, December 4</span></h2>
+    <h2><span>Track 1, MSSA CCAD7</span></h2>
     8:00A - 6:00P -- Registration Open<br />1:30P- 3:30P --  The IT Services Professional Summit <br />2:00P - 6:00P -- Exhibit Set Up<br />5:00P - 6:00P -- <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7f287f2"></a> Sessions<br />6:30P - 7:00P -- New Members Networking Meet-Up<br />7:00P - 9:00P -- President's Reception (<span>Hors d'oeuvres &amp; drink ticket provided)</span>
-    <p><a href="#diversity"></a></p>
+    <h2><span>Track 2, MSSA CCAD6</span></h2>
+
+    <h2><span>Track 3, MSSA PCA</span></h2>
     </p>
     <p>
        
