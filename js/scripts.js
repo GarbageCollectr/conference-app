@@ -191,6 +191,37 @@ var textData = localStorage["myKey"];
 localStorage.myKey = "some text value";
 var textData = localStorage.myKey;
 
+function ConfID400() {
+    console.log(raps2)
+    localStorage.setItem("regConf", raps2[0])
+}
+
+function ConfID401() {
+    console.log(raps2)
+    localStorage.setItem("regConf", raps2[1])
+}
+
+function ConfID402() {
+    console.log(raps2)
+    localStorage.setItem("regConf", raps2[2])
+}
+
+// function data() {
+//     if(raps == undefined) {
+//        console.log("Data is being parsed")
+//     } else {
+//        console.log(raps)
+//        var table = "<article>";
+//        for (var i=0; i<raps.length; i++) {
+//            table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title+ "</p>";
+//        }
+//        content.innerHTML = table
+//        //clearInterval(loadData);
+//        generateData(raps);
+       
+//     }
+//  }
+
 // for (var i=0; i<raps.length; i++) {
 //     raps[i].ID;
 // }
