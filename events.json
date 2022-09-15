@@ -4,7 +4,8 @@
 		"Location": "Denver, CO",
 		"Speaker": "Boswell Darnce",
 		"Title": "Contoso Conf Denver",
-		"Email": "registration@contosoconf.com"
+		"Email": "registration@contosoconf.com",
+		"Seats": 100
 	},
 	{
 		"ID": "401",

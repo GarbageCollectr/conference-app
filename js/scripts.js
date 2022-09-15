@@ -20,6 +20,7 @@
 
 //test
 let raps;
+let raps2;
 const content = document.querySelector('#one')
 var urlspeak = '..\\conferences.json';
 var urlevents = '..\\events.json';
@@ -37,6 +38,7 @@ fetch(req)
    raps2 = data;
  });
 
+ 
 
 function data() {
    if(raps == undefined) {
@@ -77,7 +79,7 @@ function speakersdata() {
        console.log(raps2)
        var table = "<article>";
        for (var i=0; i<raps2.length; i++) {
-           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker;
+           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker +"<br>" + '<button class="btn btn-primary" onclick="register()">Register</button>';
        }
        
        //clearInterval(loadData);
@@ -172,6 +174,36 @@ function status(){
        Hello
     </p>
     `
+}
+
+function register(){
+    content.innerHTML = 
+    +'<h1 class="mt-4">Register for Conference</h1>'
+    +'<form>'
+    +'<label for="fname">First Name:</label>'
+    +'<input type="text" id="fname" name="fname" required><br><br>'
+    +'<label for="lname">Last Name:</label>'
+    +'<input type="text" id="lname" name="lname" required><br><br>'
+    +'<label for="conf">Choose a Conference</label><br>'
+    +'<select name="conf" id="conf" required>'
+    +    '<option value="">'
+        +raps2[0].Location
+    +'</option>'
+    +    '<option value="">'
+        +raps2[1].Location
+    +'</option>'
+    +   ' <option value="">'
+        +raps2[2].Location
+    +'</option>'
+    +'</select><br>'
+    +'<label for="track">Chose a track:</label><br>'
+    +'<input type="radio" id="track1" name="track" value="Track 1">'
+    +'<label for="track1">Track 1</label><br>'
+    +'<input type="radio" id="track2" name="track" value="Track 2">'
+    +'<label for="track2">Track 2</label><br>'
+    +'<button class="btn btn-primary" onclick="submit()">Submit</button>'
+    +'</form>'
+
 }
 
 
