@@ -64,7 +64,7 @@ function speakersdata() {
        for (var i=0; i<raps.length; i++) {
            table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
        }
-       
+
        //clearInterval(loadData);
        generateData(raps);
        return table
