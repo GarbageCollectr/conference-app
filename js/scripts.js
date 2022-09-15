@@ -12,11 +12,8 @@
 // async function printJSON() {
 //     const response = await fetch("..\\conferences.json");
 //     const json = await response.json();
-//     articles = json.articles
-//     return articles
-// }
+//     }
 
-// let data = printJSON()
 
 //test
 var EvInd;
@@ -38,7 +35,9 @@ fetch(req)
  .then((data) => {
    raps2 = data;
  });
+
  
+
 function data() {
    if(raps == undefined) {
       console.log("Data is being parsed")
@@ -260,9 +259,6 @@ function ConfSelector()
     }
 }
 
-function myData(raps2){
-    console.log(raps2[0])
-}
 
 // function data() {
 //     if(raps == undefined) {
