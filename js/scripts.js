@@ -63,7 +63,7 @@ function speakersdata() {
        console.log(raps)
        var table = "<article>";
        for (var i=0; i<raps.length; i++) {
-           table += "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
+           table +='<img src="'+raps[i].photo+'">'+"<br>"+ "<h2>"+raps[i].Speaker+"</h2>"+"<p>" +raps[i].Title +"<br>" +'<a href = "mailto:'+raps[i].Email+'">Send Email</a>'+"</p>";
        }
 
        //clearInterval(loadData);
