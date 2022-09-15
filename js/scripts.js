@@ -79,7 +79,7 @@ function speakersdata() {
        console.log(raps2)
        var table = "<article>";
        for (var i=0; i<raps2.length; i++) {
-           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker +"<br>" + '<button class="btn btn-primary" onclick="register()">Register</button>';
+           table += "<h2>"+raps2[i].Title+"</h2>"+"<h3>" +raps2[i].Location+ "</h3>" +"<br>" +"Main Speaker: " + raps2[i].Speaker +"<br>"+"Available Seats: "+ raps2[i].Seats +"<br>"+ '<button class="btn btn-primary" onclick="register()">Register</button>';
        }
        
        //clearInterval(loadData);
@@ -133,9 +133,7 @@ function events(){
     +"<p>"
         +eventsdata()
     +"</p>"
-    +"<p>"
-       
-    +"</p>"
+
     
 }
 
@@ -168,7 +166,7 @@ function status(){
     `
     <h1 class="mt-4">Status</h1>
     <p>
-        Registered events will be here ....
+        
     </p>
     `
 }
@@ -183,6 +181,7 @@ function register(){
     +'<input type="text" id="lname" name="lname" required><br><br>'
     +'<label for="conf">Choose a Conference</label><br>'
     +'<select name="conf" id="conf" required>'
+    +    '<option value="">Select Below</option>'
     +    '<option value="">'
         +raps2[0].Location
     +'</option>'
